@@ -52,3 +52,27 @@ print(contains_char(input_letter(), input_word())) # type:ignore
 number_instances: int = int() # type: ignore
 if input_word[0] == input_letter # type: ignore
         number_instances == 1:  # type: ignore
+
+def contains_char(input_letter, input_word) -> None:
+    print("Searching for " + str(input_letter) + " in " + str(input_word))
+    count: int = 0
+    if input_word[0] == input_letter:
+        count = count + 1
+        print(str(input_letter) + " found at Index 0")
+    elif input_word[1] == input_letter:
+        count = count + 1
+        print(str(input_letter) + " found at Index 1")
+    elif input_word[2] == input_letter:
+        count = count + 1
+        print(str(input_letter) + " found at Index 2")
+    elif input_word[3] == input_letter:
+        count = count + 1
+        print(str(input_letter) + " found at Index 3")
+    elif input_word[4] == input_letter:
+        count = count + 1
+        print(str(input_letter) + " found at Index 4")
+    else:
+        print("Error: Character must be a single character.")
+    return count 
+
+print(contains_char(input_letter(), input_word()))
