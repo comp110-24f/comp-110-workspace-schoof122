@@ -46,3 +46,9 @@ def get_weather_report() -> str:
 
 
 print(get_weather_report())
+
+
+print(contains_char(input_letter(), input_word())) # type:ignore
+number_instances: int = int() # type: ignore
+if input_word[0] == input_letter # type: ignore
+        number_instances == 1:  # type: ignore
