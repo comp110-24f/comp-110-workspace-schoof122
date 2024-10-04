@@ -13,3 +13,8 @@ def get_coords(xs: str, ys: str) -> None:
             print(f"({xs[idx_x]},{ys[idx_y]})")
             idx_y += 1
         idx_x += 1
+
+
+# Nested the while loops without trouble
+# Couldn't get second set of coordinates to appear
+# Had to add line 11 so that it wouldn't skip the first while loop

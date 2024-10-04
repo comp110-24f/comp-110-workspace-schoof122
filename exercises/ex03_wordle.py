@@ -5,7 +5,7 @@ __author__ = "730674279"
 
 def input_guess(secret_word_len: int) -> str:
     """Allows the user to guess a word of the correct length"""
-    word: str = str(input(f"Enter a {secret_word_len} character word: "))
+    word: str = input(f"Enter a {secret_word_len} character word: ")
     while secret_word_len != len(word):
         word = input(f"That wasn't {secret_word_len} chars! Try again: ")
     return word
