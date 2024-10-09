@@ -16,3 +16,8 @@ y = x
 x[0] = 3.0
 print(y)
 print(x)
+
+
+pet_names: list[str] = ["Louie", "Bo", "Bear"]
+for pet in pet_names:
+    print("Good boy, " + (pet) + ("!"))
