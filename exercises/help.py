@@ -21,3 +21,7 @@ print(x)
 pet_names: list[str] = ["Louie", "Bo", "Bear"]
 for pet in pet_names:
     print("Good boy, " + (pet) + ("!"))
+
+
+def get_name(n: str) -> str:
+    return n
