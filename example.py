@@ -1,3 +1,5 @@
+import math
+
 print(str(3))
 print(str(3))
 
@@ -48,10 +50,11 @@ def get_weather_report() -> str:
 print(get_weather_report())
 
 
-print(contains_char(input_letter(), input_word())) # type:ignore
-number_instances: int = int() # type: ignore
-if input_word[0] == input_letter # type: ignore
-        number_instances == 1:  # type: ignore
+# print(contains_char(input_letter(), input_word())) # type:ignore
+# number_instances: int = int() # type: ignoreS
+# if input_word[0] == input_letter
+# number_instances == 1:  # type: ignore
+
 
 def contains_char(input_letter, input_word) -> None:
     print("Searching for " + str(input_letter) + " in " + str(input_word))
@@ -73,6 +76,49 @@ def contains_char(input_letter, input_word) -> None:
         print(str(input_letter) + " found at Index 4")
     else:
         print("Error: Character must be a single character.")
-    return count 
+    return count  # type: ignore
 
-print(contains_char(input_letter(), input_word()))
+
+# print(contains_char(input_letter(), input_word()))
+
+
+class Coordinate:
+    x = float
+    y = float
+
+    def __init__(self, x: float, y: float) -> None:
+        self.x = x
+        self.y = y
+
+    def get_dist(self, other) -> float:
+        """Get distance from this coord to other coord"""
+        x_diff_sq = (self.x - other.x) ** 2
+        y_diff_sq = (self.y - other.y) ** 2
+        return (x_diff_sq + y_diff_sq) ** 0.5
+
+
+origin = Coordinate(0, 0)
+pt = Coordinate(2, 3)
+print(origin.get_dist(pt))
+
+
+class Circle:
+    radius: float
+
+    def __init__(self, r: float):
+        self.radius = r
+
+    def area(self) -> float:
+        return math.pi * self.radius**2
+
+
+class Rectangle:
+    width: float
+    height: float
+
+    def __init__(self, w: float, h: float):
+        self.width = w
+        self.height = h
+
+    def area(self) -> float:
+        return self.height * self.width
