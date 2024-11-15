@@ -20,6 +20,17 @@ class Node:
 
     # Initializes each object in the node class
 
+    def __str__(self) -> str:
+        """Converts to a string."""
+        rest: str = ""
+        if self.next is None:  # Base Case
+            rest = "None"
+        else:
+            rest = str(self.next)
+        return f"{self.value} -> {rest}"
+
+    # Did in class--returns object as a string (same as function below)
+
 
 def to_str(head: Node | None) -> str:
     """Show a linked list as a string."""
@@ -49,6 +60,31 @@ def last(head: Node) -> int:
 # Also done in class: returns the final value in the linked list
 # by using head.next to reach the final object and return its value
 
+
+def recursive_range(start: int, end: int) -> Node | None:
+    """Shows recursion of a function through a given range."""
+    if start > end:
+        raise Exception("Start shouldn't be bigger than end")
+    # Base case
+    if start == end:
+        return None
+    # Recursive case
+    else:
+        first: int = start
+        rest: Node | None = recursive_range(start + 1, end)
+    return Node(first, rest)
+
+
+# (In class) If start is greater than end = edge case = raise error
+# Base case is when the start node is the same as the end (return none)
+# Recursive case: created first variable to plug into the Node parameters at the end
+# Used it to get the first value in the linked list
+# Used rest to call the function within itself and get the rest of the nodes
+# Returned a list of Nodes with first (the start value) as the 1st one
+# and rest following it
+
+lots_of_nodes: Node | None = recursive_range(1, 100)
+print(lots_of_nodes)
 print(last(one))
 
 
